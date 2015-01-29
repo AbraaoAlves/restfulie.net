@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
+    <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{33F7784D-7DBF-4ACA-A5E5-F83E78BB0B6C}</ProjectGuid>
+    <ProjectGuid>{6DF340D7-843F-4B01-BFB1-F8A5032D57C4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Restfulie.Server.Tests</RootNamespace>
     <AssemblyName>Restfulie.Server.Tests</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -30,62 +30,50 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AutomatedDebug|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>..\build\Debug\Restfulie.Server.Tests\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'AutomatedRelease|AnyCPU' ">
-    <DebugSymbols>true</DebugSymbols>
-    <OutputPath>..\build\Release\Restfulie.Server.Tests\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <DebugType>full</DebugType>
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
-    <Optimize>true</Optimize>
-  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Castle.Core, Version=1.2.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Dependencies\Castle\Castle.Core.dll</HintPath>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
-    <Reference Include="Moq, Version=4.0.10501.6, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Dependencies\Moq\Moq.dll</HintPath>
+    <Reference Include="Moq">
+      <HintPath>..\packages\Moq.4.0.10827\lib\NET40\Moq.dll</HintPath>
     </Reference>
-    <Reference Include="nunit.core, Version=2.5.5.10112, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Dependencies\NUnit\nunit.core.dll</HintPath>
+    <Reference Include="nunit.framework">
+      <HintPath>..\packages\NUnit.2.6.0.12054\lib\nunit.framework.dll</HintPath>
     </Reference>
-    <Reference Include="nunit.framework, Version=2.5.5.10112, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Dependencies\NUnit\nunit.framework.dll</HintPath>
-    </Reference>
-    <Reference Include="Should, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\Dependencies\Should\Should.dll</HintPath>
+    <Reference Include="Should">
+      <HintPath>..\packages\Should.1.1.12.0\lib\Should.dll</HintPath>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Core">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
     </Reference>
-    <Reference Include="System.Web.Abstractions">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
     </Reference>
-    <Reference Include="System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
-    <Reference Include="System.Web.Routing">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll</HintPath>
     </Reference>
-    <Reference Include="System.Xml.Linq">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
     </Reference>
-    <Reference Include="System.Data.DataSetExtensions">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
     </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
   </ItemGroup>
@@ -96,55 +84,58 @@
     <Compile Include="Extensions\DateTimeExtensionsTests.cs" />
     <Compile Include="Extensions\ObjectExtensionsTests.cs" />
     <Compile Include="Extensions\TypeExtensionsTests.cs" />
+    <Compile Include="Fixtures\SomeController.cs" />
+    <Compile Include="Fixtures\SomeResource.cs" />
     <Compile Include="Fixtures\SomeResult.cs" />
     <Compile Include="Fixtures\SomeResultDecorator.cs" />
+    <Compile Include="Marshalling\RestfulieMarshallerTests.cs" />
     <Compile Include="Marshalling\Serializers\AtomPlusXml\AtomPlusXmlHypermediaInjectorTests.cs" />
     <Compile Include="Marshalling\Serializers\AtomPlusXml\AtomPlusXmlSerializerTests.cs" />
     <Compile Include="Marshalling\Serializers\AtomPlusXml\FeedTests.cs" />
     <Compile Include="Marshalling\Serializers\Json\JsonHypermediaInjectorTests.cs" />
     <Compile Include="Marshalling\Serializers\Json\JsonSerializerTests.cs" />
     <Compile Include="Marshalling\Serializers\XmlAndHypermedia\XmlHypermediaInjectorTests.cs" />
+    <Compile Include="Marshalling\Serializers\XmlAndHypermedia\XmlSerializerTests.cs" />
     <Compile Include="MediaTypes\DefaultMediaTypeListTests.cs" />
     <Compile Include="MediaTypes\DriverTests.cs" />
     <Compile Include="MediaTypes\VendorizedTests.cs" />
     <Compile Include="Negotiation\AcceptHeaderToMediaTypeTests.cs" />
     <Compile Include="Negotiation\ContentTypeToMediaTypeTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Marshalling\Serializers\XmlAndHypermedia\XmlSerializerTests.cs" />
-    <Compile Include="Marshalling\RestfulieMarshallerTests.cs" />
-    <Compile Include="Fixtures\SomeController.cs" />
-    <Compile Include="Fixtures\SomeResource.cs" />
     <Compile Include="RelationsFactoryTests.cs" />
+    <Compile Include="RelationsTests.cs" />
     <Compile Include="Results\BadRequestTests.cs" />
     <Compile Include="Results\Chooser\ResultChooserTests.cs" />
-    <Content Include="Results\CreatedTests.cs" />
     <Compile Include="Results\Decorators\ContentTests.cs" />
     <Compile Include="Results\Decorators\ContentTypeTests.cs" />
     <Compile Include="Results\Decorators\LocationTests.cs" />
     <Compile Include="Results\Decorators\StatusCodeTests.cs" />
-    <Compile Include="RelationsTests.cs" />
     <Compile Include="Results\ForbiddenTests.cs" />
     <Compile Include="Results\InternalServerErrorTests.cs" />
     <Compile Include="Results\NotAcceptableTests.cs" />
     <Compile Include="Results\NotFoundTests.cs" />
     <Compile Include="Results\NotModifiedTests.cs" />
+    <Compile Include="Results\OKTests.cs" />
     <Compile Include="Results\PreconditionFailedTests.cs" />
     <Compile Include="Results\ResultDecoratorTestExtensions.cs" />
     <Compile Include="Results\SeeOtherTests.cs" />
-    <Compile Include="Results\OKTests.cs" />
     <Compile Include="Results\UnsupportedMediaTypeTests.cs" />
     <Compile Include="Unmarshalling\Deserializers\AtomPlusXmlDeserializerTests.cs" />
     <Compile Include="Unmarshalling\Deserializers\JsonDeserializerTests.cs" />
-    <Compile Include="Unmarshalling\Resolver\AcceptPostPutAndPatchVerbsTests.cs" />
-    <Compile Include="Unmarshalling\RestfulieUnmarshallerTests.cs" />
     <Compile Include="Unmarshalling\Deserializers\XmlDeserializerTests.cs" />
+    <Compile Include="Unmarshalling\Resolver\AcceptPostPutAndPatchVerbsTests.cs" />
     <Compile Include="Unmarshalling\Resolver\UnmarshallerResolverTests.cs" />
+    <Compile Include="Unmarshalling\RestfulieUnmarshallerTests.cs" />
+    <Content Include="Results\CreatedTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Restfulie.Server\Restfulie.Server.csproj">
-      <Project>{94F2996B-1DC4-4C6B-9612-E16B61375B92}</Project>
+      <Project>{18C82B7B-05CB-4AC4-967A-836FBFB1CE1C}</Project>
       <Name>Restfulie.Server</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
